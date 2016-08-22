@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: libdvdcss.SlackBuild,v 1.7 2016/08/22 20:09:34 gsotirov Exp $
+# $Id: libdvdcss.SlackBuild,v 1.8 2016/08/22 20:16:56 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=libdvdcss
-VERSION=1.3.0
+VERSION=1.4.0
 BUILD=${BUILD:-1}
 
 TMP=${TMP:-/tmp}
