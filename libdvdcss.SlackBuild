@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: libdvdcss.SlackBuild,v 1.5 2016/08/22 19:47:57 gsotirov Exp $
+# $Id: libdvdcss.SlackBuild,v 1.6 2016/08/22 20:06:15 gsotirov Exp $
 #
 
 . ../../slack-package.conf
@@ -60,11 +60,12 @@ CXXFLAGS=$SLKCFLAGS \
             --host=$ARCH-slackware-linux \
             --prefix=/usr \
             --libdir=/usr/lib${LIBDIRSUFFIX} \
+            --docdir=/usr/doc/${NAME}-${VERSION} \
             --enable-shared=yes \
             --enable-static=no || exit 2
 
 # Build & install
-make -j4 || exit 3
+make V=1 -j4 || exit 3
 make DESTDIR=$PKG install || exit 4
 
 # Prepare
